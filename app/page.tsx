@@ -1,9 +1,12 @@
-import Navbar from './components/Navbar'
-import styles from './page.module.css'
+import Navbar from "./components/Navbar";
+import s from "./page.module.css";
+import Main from "./components/Main";
 
 export default function Home() {
   return (
-
-    <main><Navbar/></main>
-  )
+    <main className={s.container}>
+      <Navbar />
+      <Main />
+    </main>
+  );
 }

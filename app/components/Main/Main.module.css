@@ -1,0 +1,25 @@
+.arrow_list {
+  height: 100%;
+  width: 100px;
+  /* position: relative; */
+}
+
+.arrow_left > svg {
+  position: absolute;
+  right: auto;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  fill: red;
+}
+
+.arrow_right > svg {
+  position: absolute;
+  left: auto;
+  top: 0px;
+  right: 0px;
+  bottom: auto;
+
+  fill: red;
+}
