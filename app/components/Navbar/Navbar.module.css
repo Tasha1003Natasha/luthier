@@ -4,17 +4,18 @@
   top: 0px;
   right: 0px;
   z-index: 1000;
-  /* display: inline-block; */
+  display: inline-block;
   width: 100%;
-  height: 174px;
-  /* margin-right: auto;
-  margin-left: auto; */
+  /* height: 174px; */
+  margin-right: auto;
+  margin-left: auto;
   float: none;
-  /* text-align: center; */
+  text-align: center;
+  padding: 50px 0px;
 
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
   outline: 1px solid blue;
 }
@@ -29,23 +30,28 @@
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   font-family: "Indie Flower", cursive;
-  color: #000;
+  color: var(--font-primary);
   font-size: 20px;
   text-align: center;
   text-decoration: none;
 }
 
 .nav_logo {
-  padding: 78px 30px 51px;
+  padding: 30px 50px;
   height: 100%;
   width: 120px;
-  border: 1px solid black;
+  border: 1px solid var(--font-primary);
   border-radius: 50%;
   margin: 0 30px;
   position: relative;
   transition: opacity 500ms ease 0s;
   opacity: 1;
 }
+
+.nav_logo > img {
+  filter: brightness(0) invert(1);
+}
+
 /* 
 @media (min-width: 768px) {
   .nav_logo {

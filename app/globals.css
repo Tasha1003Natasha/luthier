@@ -1,6 +1,6 @@
-/* :root {
-  --colors-font-primary: #0d1a26;
-} */
+:root {
+  --font-primary: white;
+}
 
 html,
 body {

@@ -1,21 +1,27 @@
 import React from "react";
 import s from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav className={s.nav}>
-      <a href="/work" className={s.nav_link}>
+      <Link href="/work" className={s.nav_link}>
         Work
-      </a>
-      <a href="/">
-        <div className={s.nav_logo}>
-          <Image src="/logo.svg" layout="fill" objectFit="contain" alt="Logo" />
-        </div>
-      </a>
-      <a href="/profile" className={s.nav_link}>
+      </Link>
+      <Link href="/" className={s.nav_logo}>
+        <Image
+          src="/icons/logo.svg"
+          style={{ objectFit: "contain" }}
+          alt="Logo"
+          fill
+          sizes="100vw"
+          priority
+        />
+      </Link>
+      <Link href="/profile" className={s.nav_link}>
         Profile
-      </a>
+      </Link>
     </nav>
   );
 };
