@@ -19,9 +19,6 @@
       }
     ],
     "baseUrl": ".",
-    // "paths": {
-    //   "@/*": ["./*"]
-    // }
     "paths": {
       "@/components/*": ["components/*"],
       "@/public/*": ["public/*"],
