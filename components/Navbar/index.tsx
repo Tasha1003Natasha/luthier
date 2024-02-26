@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
           alt="Logo"
           // fill
           // sizes="100vw"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           priority
         />
       </Link>

@@ -44,3 +44,8 @@ input[type="submit"] {
   outline: none;
   cursor: pointer;
 }
+
+/* ////////Carousel////////////// */
+.carousel-inner {
+  height: 100vh;
+}

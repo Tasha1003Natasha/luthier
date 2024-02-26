@@ -40,7 +40,6 @@ const CarouselBox: React.FC = () => {
             src={test}
             // src={item?.imageUrl}
             // style={{ objectFit: "contain" }}
-
             sizes="100vw"
             alt={item.title}
           />

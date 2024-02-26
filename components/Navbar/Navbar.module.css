@@ -11,15 +11,15 @@
   margin-left: auto;
   float: none;
   /* text-align: center; */
-  padding: 5px 0px;
+  padding: 10px 0px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  /* 
+  outline: 1px solid blue; */
 
-  outline: 1px solid blue;
-
-  background: black;
+  /* background: black; */
 }
 
 .nav_link {
@@ -33,7 +33,7 @@
   transition: all 500ms ease-in-out;
   font-family: "Indie Flower", cursive;
   color: var(--font-primary);
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
   text-decoration: none;
 }
@@ -48,6 +48,11 @@
   position: relative;
   transition: opacity 500ms ease 0s;
   opacity: 1;
+}
+
+.nav_logo > img {
+  height: 100%;
+  width: 100%;
 }
 
 /* .nav_logo > img {
