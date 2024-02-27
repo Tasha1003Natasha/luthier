@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import data from "@/data/list";
+import React, { useEffect, useState } from "react";
+import dataList from "@/data/list";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import s from "./CarouselBox.module.css";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import test from "@/public/images/test.png";
+import { Storage } from "@google-cloud/storage";
 
 // interface CarouselItem {
 //   id: number;
@@ -30,10 +31,27 @@ const CarouselBox: React.FC = () => {
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
+  //////////////
+  // const [files, setFiles] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchFiles = async () => {
+  //     try {
+  //       const response = await fetch("/api/google-drive");
+  //       const data = await response.json();
+  //       console.log("data:", data);
+  //       setFiles(data.files);
+  //     } catch (error) {
+  //       console.error("Error fetching files:", error);
+  //     }
+  //   };
+
+  //   fetchFiles();
+  // }, []);
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      {data.map((item) => (
+      {dataList.map((item) => (
         <Carousel.Item key={item.id} interval={4000}>
           {/* <img src={item?.imageUrl} alt={item.title} />  */}
           <Image
