@@ -32,22 +32,44 @@ const CarouselBox: React.FC = () => {
     setIndex(selectedIndex);
   };
   //////////////
-  // const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState([]);
 
   // useEffect(() => {
-  //   const fetchFiles = async () => {
+  //   const fetchData = async () => {
   //     try {
   //       const response = await fetch("/api/google-drive");
   //       const data = await response.json();
-  //       console.log("data:", data);
-  //       setFiles(data.files);
+  //       console.log("data :", data);
+  //       setFiles(data);
   //     } catch (error) {
-  //       console.error("Error fetching files:", error);
+  //       console.error("Error fetching data:", error);
   //     }
   //   };
 
-  //   fetchFiles();
+  //   fetchData();
   // }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/google-drive");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new Error("Response is not in JSON format");
+        }
+        const data = await response.json();
+        console.log("data :", data);
+        setFiles(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
