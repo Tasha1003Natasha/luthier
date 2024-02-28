@@ -11,7 +11,7 @@
   margin-left: auto;
   float: none;
   /* text-align: center; */
-  padding: 10px 0px;
+  padding: 15px 0px;
 
   display: flex;
   align-items: center;
@@ -32,7 +32,14 @@
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   font-family: "Indie Flower", cursive;
-  color: var(--font-primary);
+  /* color: #b8860b; */
+
+  background: linear-gradient(45deg, #f4d03f, #d4ac0d, #f4d03f);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
   font-size: 40px;
   text-align: center;
   text-decoration: none;

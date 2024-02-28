@@ -11,13 +11,13 @@ const Navbar: React.FC = () => {
       </Link>
       <Link href="/" className={s.nav_logo}>
         <Image
-          src="/icons/logo3.svg"
+          src="/icons/logo_gold.svg"
           style={{ objectFit: "contain" }}
           alt="Logo"
           // fill
           // sizes="100vw"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           priority
         />
       </Link>

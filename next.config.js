@@ -5,6 +5,9 @@
 // module.exports = nextConfig;
 
 // next.config.js
+
+require("dotenv").config();
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -13,6 +16,9 @@ const nextConfig = {
       "www.googleapis.com",
       "lh3.googleusercontent.com",
     ],
+  },
+  env: {
+    API_KEY: process.env.API_KEY,
   },
 };
 
