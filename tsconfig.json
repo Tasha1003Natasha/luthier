@@ -26,6 +26,16 @@
     }
   },
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/layout.tsx",
+    "app/api/google-drive.js",
+    "components/CarouselBox/index.jsx",
+    "components/Main/index.jsx",
+    "app/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }
