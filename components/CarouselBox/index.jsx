@@ -74,7 +74,7 @@ const CarouselBox = ({ files }) => {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "100vw", height: "100vh", objectFit: "fill" }}
+            style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
           />
           <Carousel.Caption>
             {/* <h3>{item.title}</h3>
