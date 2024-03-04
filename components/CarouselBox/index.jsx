@@ -6,8 +6,6 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import s from "./CarouselBox.module.css";
 import Image from "next/image";
-// import { StaticImageData } from "next/image";
-import test from "@/public/images/test.png";
 
 // interface CarouselItem {
 //   id: number;
@@ -71,14 +69,12 @@ const CarouselBox = ({ files }) => {
           {/* <img src={item?.downloadUrl} alt={item?.etag} /> */}
           <Image
             src={item?.webContentLink}
-            style={{ objectFit: "contain", height: "100%", width: "100%" }}
-            // sizes="100vw"
-            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            // fill={true}
             alt={item?.etag}
-            width={800}
-            height={800}
             priority={true}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100vw", height: "100vh", objectFit: "fill" }}
           />
           <Carousel.Caption>
             {/* <h3>{item.title}</h3>

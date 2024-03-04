@@ -46,6 +46,9 @@ input[type="submit"] {
 }
 
 /* ////////Carousel////////////// */
-.carousel-inner {
-  height: 100vh;
+.carousel-inner > img {
+  height: 100vh !important;
+  width: 100vw !important;
+  /* 
+  border: 1px solid blue; */
 }
