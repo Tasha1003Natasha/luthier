@@ -1,5 +1,9 @@
+@import "../components/CarouselBox//CarouselBox.module.css";
+
 :root {
   --font-primary: white;
+  --font-gray: #dddadb;
+  --font-gold: #c28e0a;
 }
 
 html,

@@ -23,7 +23,8 @@
       "@/components/*": ["components/*"],
       "@/public/*": ["public/*"],
       "@/data/*": ["data/*"],
-      "@/service/*": ["service/*"]
+      "@/service/*": ["service/*"],
+      "@/redux/*": ["redux/*"]
     }
   },
 
@@ -32,11 +33,12 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/layout.tsx",
+    "app/layout.jsx",
     "app/api/google-drive.js",
     "components/CarouselBox/index.jsx",
     "components/Main/index.jsx",
-    "app/page.jsx"
+    "app/page.jsx",
+    "components/Navbar/index.jsx"
   ],
   "exclude": ["node_modules"]
 }

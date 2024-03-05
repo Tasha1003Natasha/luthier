@@ -1,0 +1,9 @@
+.light > .carousel-control-prev-icon,
+.light > .carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+.dark > .carousel-control-prev-icon,
+.dark > .carousel-control-next-icon {
+  filter: invert(0%);
+}

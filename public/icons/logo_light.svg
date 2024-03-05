@@ -5,7 +5,7 @@
         <style type="text/css">
             <![CDATA[
             .str0 {
-                stroke: #c28e0a;
+                stroke: #dddadb;
                 stroke-width: 10
             }
 
@@ -14,38 +14,38 @@
             }
 
             .fil3 {
-                fill: #c28e0a;
+                fill: #dddadb;
 
 
-                stroke: #c28e0a;
+                stroke: #dddadb;
                 stroke-width: 0.5
             }
 
             .fil2 {
-                fill: #c28e0a;
+                fill: #dddadb;
 
-                stroke: #c28e0ae;
+                stroke: #dddadb;
                 stroke-width: 2
             }
 
             .fil1 {
-                fill: #BCB8B9;
-
+                fill: #dddadb;
+                /* ///////////// */
 
             }
 
             .fil0 {
                 fill: transparent;
 
-                stroke: #c28e0a;
+                stroke: #dddadbb;
                 stroke-width: 2
             }
 
             .fil5 {
-                fill: #c28e0a;
+                fill: #dddadb;
                 fill-rule: nonzero;
 
-                stroke: #c28e0a;
+                stroke: #dddadb;
                 stroke-width: 3
             }
             ]]>

@@ -32,17 +32,36 @@
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   font-family: "Indie Flower", cursive;
-  /* color: #b8860b; */
-
-  background: linear-gradient(45deg, #f4d03f, #d4ac0d, #f4d03f);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--font-gray);
 
   font-size: 40px;
   text-align: center;
   text-decoration: none;
+  margin-left: 10px;
+}
+
+.nav_link_gold {
+  position: relative;
+  display: inline-block;
+  float: none;
+  clear: none;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  font-family: "Indie Flower", cursive;
+
+  /* color: black; */
+  color: var(--font-gold);
+  /* background: linear-gradient(45deg, #f4d03f, #d4ac0d, #f4d03f);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+
+  margin-left: 10px;
 }
 
 .nav_logo {

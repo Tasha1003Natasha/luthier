@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import dataList from "@/data/list";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import s from "./CarouselBox.module.css";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { getCurrentItemHG, getHeadGallery } from "@/redux/files/filesSelectors";
+import { setCurrentItemHG } from "@/redux/files/filesSlice";
 
 // interface CarouselItem {
 //   id: number;
@@ -18,55 +20,36 @@ import Image from "next/image";
 //   bootstrap: CarouselItem[];
 // }
 
-const CarouselBox = ({ files }) => {
+const CarouselBox = () => {
+  const dispatch = useDispatch();
+  const files = useSelector(getHeadGallery);
+  const currentFond = useSelector(getCurrentItemHG);
+
+  const [list, setList] = useState([]);
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
-  const [list, setList] = useState([]);
+  const handleSlide = (el) => {
+    dispatch(setCurrentItemHG(el.fond));
+  };
 
   useEffect(() => {
     setList(files);
   }, [files]);
 
-  //////////////////////
-  //   const { bootstrap }: Data = data;
-  //   const test = data.map((item) => item.imageUrl);
-  //   console.log("test:", test);
-
-  // const [index, setIndex] = useState<number>(0);
-
-  // const handleSelect = (selectedIndex: number) => {
-  //   setIndex(selectedIndex);
-  // };
-  //////////////
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("/api/google-drive");
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const data = await response.json();
-  //       console.log("data:", data);
-  //       setFiles(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      onSlide={(index) => handleSlide(list[index])}
+      className={currentFond === "dark" ? s.dark : s.light}
+      fade
+    >
       {list?.map((item) => (
-        <Carousel.Item key={item.id}>
-          {/* <img src={item?.imageUrl} alt={item.title} />  */}
-          {/* <img src={item?.downloadUrl} alt={item?.etag} /> */}
+        <Carousel.Item key={item?.id} interval={4000}>
           <Image
             src={item?.webContentLink}
             alt={item?.etag}
@@ -74,11 +57,14 @@ const CarouselBox = ({ files }) => {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
+            style={{
+              width: "100vw",
+              height: "100vh",
+              objectFit: "cover",
+            }}
           />
           <Carousel.Caption>
-            {/* <h3>{item.title}</h3>
-            <p>{item.body}</p> */}
+            {/* <h3>UniSon</h3> */}
             {/* <button className="btn btn-danger">Visit Docs</button> */}
             {/* <button>Visit Docs</button> */}
           </Carousel.Caption>
