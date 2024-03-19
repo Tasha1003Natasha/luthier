@@ -35,6 +35,7 @@ const Main = () => {
         const dataLight = await getCarouselGalleryLight();
         // setFilesLight(dataLight.items);
         const dataDark = await getCarouselGalleryDark();
+        console.log("dataDark:", dataDark);
         // setFilesDark(dataDark.items);
 
         const combinedData = [];

@@ -11,15 +11,16 @@
   margin-left: auto;
   float: none;
   /* text-align: center; */
-  padding: 15px 0px;
+  /* padding: 15px 0px; */
 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* 
-  outline: 1px solid blue; */
 
-  /* background: black; */
+  outline: 1px solid blue;
+
+  /* background-color: black; */
+  height: 260px;
 }
 
 .nav_link {

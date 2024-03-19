@@ -18,6 +18,7 @@ const Navbar = () => {
       <Link
         href="/work"
         className={currentFond === "dark" ? s.nav_link : s.nav_link_gold}
+        passHref
       >
         Work
       </Link>
@@ -25,23 +26,23 @@ const Navbar = () => {
         {currentFond === "dark" ? (
           <Image
             src="/icons/logo_light.svg"
-            style={{ objectFit: "contain" }}
             alt="Logo"
             // fill
             // sizes="100vw"
             width={200}
             height={200}
+            style={{ objectFit: "contain" }}
             priority
           />
         ) : (
           <Image
             src="/icons/logo_gold.svg"
-            style={{ objectFit: "contain" }}
             alt="Logo"
             // fill
             // sizes="100vw"
             width={200}
             height={200}
+            style={{ objectFit: "contain" }}
             priority
           />
         )}

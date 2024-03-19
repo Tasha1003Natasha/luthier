@@ -1,0 +1,8 @@
+.section {
+  background-color: red;
+
+  /* height: calc(100vh - 260px); */
+  margin-top: 260px;
+  overflow: hidden;
+  height: 100vh;
+}
