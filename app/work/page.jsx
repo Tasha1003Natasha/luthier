@@ -1,21 +1,38 @@
 "use client";
 
+import { getCustomCards, getRestorationCards } from "@/service/cards";
+import CardsGallery from "@/components/CardsGallery/index";
 import s from "./work.module.css";
-import Cards from "@/components/Cards";
-
-// import { Card } from "react-bootstrap";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import Container from "react-bootstrap/Container";
+import { useEffect, useState } from "react";
 
 const Work = () => {
+  const [custom, setCustom] = useState([]);
+  console.log("custom:", custom);
+  const [rest, setRest] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dataCustomCards = await getCustomCards();
+        const dataRestCards = await getRestorationCards();
+
+        setCustom(dataCustomCards.items);
+        setRest(dataRestCards.items);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <main className={s.section}>
-      {/* <Container className="mx-auto">
-        <Row xs={1} md={2} className="g-4"></Row>
-      </Container> */}
-      <Cards />
-    </main>
+    <div className={s.section}>
+      <h2>Custom</h2>
+      <CardsGallery list={custom} />
+      <h2>Restoration</h2>
+      <CardsGallery list={rest} />
+    </div>
   );
 };
 
