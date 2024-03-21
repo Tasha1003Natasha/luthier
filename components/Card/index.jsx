@@ -9,8 +9,8 @@ const Card = ({ item }) => {
         height={0}
         sizes="100vw"
         style={{
-          width: "30vw",
-          height: "35vh",
+          width: "24vw",
+          height: "40vh",
           objectFit: "cover",
         }}
         src={item?.webContentLink}

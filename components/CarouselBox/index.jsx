@@ -42,6 +42,7 @@ const CarouselBox = () => {
 
   return (
     <Carousel
+      // variant="dark"
       activeIndex={index}
       onSelect={handleSelect}
       onSlide={(index) => handleSlide(list[index])}

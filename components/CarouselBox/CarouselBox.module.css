@@ -1,4 +1,4 @@
-.light > .carousel-control-prev-icon,
+/* .light > .carousel-control-prev-icon,
 .light > .carousel-control-next-icon {
   filter: invert(100%);
 }
@@ -6,4 +6,23 @@
 .dark > .carousel-control-prev-icon,
 .dark > .carousel-control-next-icon {
   filter: invert(0%);
+}
+ */
+
+/* ////////Gold arrow///////////////////// */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(0.6) sepia(1) saturate(55) hue-rotate(40deg);
+  color: var(--font-gold);
+}
+
+/* .carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+} */
+
+/* ////////Button////////////////// */
+.carousel-indicators [data-bs-target] {
+  background-color: var(--font-gold) !important;
 }
